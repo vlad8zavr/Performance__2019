@@ -1,7 +1,7 @@
 # ШРИ 2019: Performance
 
 ## Задание
-Оптимизировать страницу, выложить результат на [Github-Pages](https://help.github.com/en/articles/creating-a-github-pages-site) и проверить результат на [shri-perf.ru](shri-perf.ru).
+Оптимизировать страницу, выложить результат на [Github-Pages](https://help.github.com/en/articles/creating-a-github-pages-site) и проверить результат на [shri-perf.ru](https://shri-perf.ru), отправив адрес вашей страницы.
 
 ## Рекомендации
 
