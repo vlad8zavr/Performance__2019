@@ -9398,58 +9398,21 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 @media (prefers-reduced-motion: reduce) {
-  .form-control {
-    transition: none;
-  }
-  .btn {
-    transition: none;
-  }
-  .fade {
-    transition: none;
-  }
-  .collapsing {
-    transition: none;
-  }
-  .custom-switch .custom-control-label::after {
-    transition: none;
-  }
-  .custom-range::-webkit-slider-thumb {
-    transition: none;
-  }
-  .custom-range::-moz-range-thumb {
-    transition: none;
-  }
-  .custom-range::-ms-thumb {
-    transition: none;
-  }
+  .form-control, .btn, .fade, .collapsing, 
+  .custom-switch .custom-control-label::after,
+  .custom-range::-webkit-slider-thumb,
+  .custom-range::-moz-range-thumb,
+  .custom-range::-ms-thumb,
   .custom-control-label::before,
   .custom-file-label,
-  .custom-select {
-    transition: none;
-  }
-  .badge {
-    transition: none;
-  }
-  .progress-bar {
-    transition: none;
-  }
-  .progress-bar-animated {
-    animation: none;
-  }
-  .modal.fade .modal-dialog {
-    transition: none;
-  }
-  .carousel-item {
-    transition: none;
-  }
+  .custom-select,
+  .badge, .progress-bar, .progress-bar-animated,
+  .modal.fade .modal-dialog,
+  .carousel-item,
   .carousel-fade .active.carousel-item-left,
-  .carousel-fade .active.carousel-item-right {
-    transition: none;
-  }
+  .carousel-fade .active.carousel-item-right,
   .carousel-control-prev,
-  .carousel-control-next {
-    transition: none;
-  }
+  .carousel-control-next,
   .carousel-indicators li {
     transition: none;
   }
