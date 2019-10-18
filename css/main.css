@@ -334,6 +334,51 @@ html {
     height: 100%;
 }
 
+.weather {
+    display: flex;
+}
+.weather__item {
+    margin-right: 18px;
+}
+.weather__item-title {
+    color: #858585;
+    margin-bottom: 4px;
+}
+.weather__item-temp {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.16;
+    font-family: "PT Sans Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.weather__item_outside {
+    padding-right: 31px;
+}
+.weather__item_cloud-drizzle {
+    background: url("assets/cloud-drizzle.png") 100% 70%/26px no-repeat;
+}
+.stats {
+    opacity: 0;
+}
+.panel__icon {
+    width: 24px;
+    height: 24px;
+}
+.panel__icon_temp_off {
+    background: url("assets/panel__icon_temp_off.svg") center center/contain no-repeat;
+}
+.panel__icon_temp_on {
+    background: url("assets/panel__icon_temp_on.svg") center center/contain no-repeat;
+}
+.panel__icon_light_off {
+    background: url("assets/panel__icon_light_off.svg") center center/contain no-repeat;
+}
+.panel__icon_light_on {
+    background: url("assets/panel__icon_light_on.svg") center center/contain no-repeat;
+}
+.panel__icon_clock {
+    background: url("assets/panel__icon_clock.svg") center center/contain no-repeat;
+}
+
 .card-heading {
     display: flex;
     align-items: center;
