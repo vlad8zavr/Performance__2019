@@ -24437,24 +24437,6 @@
     }
 ]);
 
-
-
-const output = document.querySelector('.modal__value');
-const rangeSLider = document.querySelector('.adjust-bar.adjust-bar_theme_temp');
-
-// rangeSLider.oninput = function() {
-//     output.innerHTML = this.value > 0 ? '+' + this.value : this.value;
-// }
-
-const arrowLeftDevs = document.querySelector('.devices__paginator .paginator__arrow_left');
-const arrowRightDevs = document.querySelector('.devices__paginator .paginator__arrow_right');
-const panelCountDevs = document.querySelectorAll('.devices__panel').length;
-const devices = document.querySelector('.devices');
-const pagiantorDevs = document.querySelector('.devices__paginator');
-let currentPageDevs = 1;
-
-// pagiantorDevs.classList.toggle('paginator_hide', panelCountDevs < 7);
-
 $('.card').each(function(e) {
     if ($(this).hasClass('card_size_s')) {
         $(this).css({'border-radius': '22px'})
@@ -24462,72 +24444,6 @@ $('.card').each(function(e) {
         $(this).css({'border-radius': '54px'})
     }
 });
-
-
-let curValue;
-let curRotate;
-let maxRotate = 0.42; // 150 градусов
-let minRotate = -0.42; // -150 градусов
-
-const MIN_VALUE = 26;
-const MAX_VALUE = 35;
-const INDICATOR_OFFSET = 265;
-
-const rotateToValue = function(rotate) {
-    return Math.floor((Math.abs(rotate * 360 * 1.73 + INDICATOR_OFFSET) / 53) + MIN_VALUE);
-}
-
-
-/**
- * @param {Number} rotate Количество оборотов от нейтриального положения.
- */
-function setRotate(rotate) {
-    if (rotate > maxRotate) {
-        rotate = maxRotate;
-    } else if (rotate < minRotate) {
-        rotate = minRotate;
-    }
-
-    curRotate = rotate;
-    curValue = rotateToValue(rotate);
-
-    document.querySelector('.modal_knob .modal__value').innerHTML = '+' + curValue;
-    document.querySelector('.knob__value').innerHTML = '+' + curValue;
-    document.querySelector('.knob__indicator').style.strokeDasharray = curRotate * 360 * 1.73 + INDICATOR_OFFSET + ' 629';
-    document.querySelector('.knob__arrow').style.transform = 'rotate(' + (curRotate * 360) + 'deg)';
-}
-
-function getPosition(elem) {
-    const rect = elem.getBoundingClientRect();
-
-    return [
-        rect.left + (rect.right - rect.left) / 2,
-        rect.top + (rect.bottom - rect.top) / 2
-    ];
-}
-
-function getMouseAngle(event, centerElem) {
-    const pos = getPosition(centerElem);
-    let cursor = [event.clientX, event.clientY];
-    let rad;
-
-    if (event.targetTouches && event.targetTouches[0]) {
-        cursor = [event.targetTouches[0].clientX, event.targetTouches[0].clientY];
-    }
-
-    rad = Math.atan2(cursor[1] - pos[1], cursor[0] - pos[0]);
-    rad += Math.PI / 2;
-
-    return rad;
-}
-
-const TEMPS = {
-    'manual': -10,
-    'cold': 0,
-    'warm': 23,
-    'hot': 30
-}
-
 
 document.addEventListener("DOMContentLoaded", function () {
     $('.card').each(function(e) {
@@ -24554,33 +24470,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const arrowLeftScens = document.querySelector('.scenarios__paginator .paginator__arrow_left');
-const arrowRightScens = document.querySelector('.scenarios__paginator .paginator__arrow_right');
-const panelCountScens = document.querySelectorAll('.scenarios__panel').length;
-const pageCountScens = document.querySelectorAll('.scenarios__page').length;
-const scenarios = document.querySelector('.scenarios');
-const pagiantorScens = document.querySelector('.scenarios__paginator');
-let currentPage = 1;
-
-
-
-
-const selectButton = document.querySelector('.filter__select-button');
-const selectButtonText = document.querySelector('.filter__select-button .button__text');
-const popup = document.querySelector('.filter__select-popup');
-
-
-
-let widths = '';
-window.addEventListener('scroll', function() {
-    widths += document.querySelectorAll('body')[0].offsetWidth;
-
-});
-
 $(document).ready(function(){
-
     var carousel = $("#carousel");
-
     carousel.owlCarousel();
 });
 
