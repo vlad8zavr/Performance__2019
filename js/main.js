@@ -1,14 +1,8 @@
-"use strict";
-
-$('.card').each(function(e) {
-    if ($(this).hasClass('card_size_s')) {
-        $(this).css({'border-radius': '22px'})
-    } else {
-        $(this).css({'border-radius': '54px'})
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
+
+    var carousel = $("#carousel");
+    carousel.owlCarousel();
+
     $('.card').each(function(e) {
         if ($(this).hasClass('card_size_s')) {
             $(this).css({'border-radius': '22px'})
@@ -17,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     var waterContainer = document.querySelector('.card.card_size_s:last-child');
-
     waterContainer.innerHTML = 
                 '<div class="card-heading">' +
                     '<div class="card-icon-wrap">' +
@@ -30,15 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     '<p class="card-time card-time_block">16:20, Сегодня</p>' +
                 '</div>'
 
-});
-
-
-$(document).ready(function(){
-    var carousel = $("#carousel");
-    carousel.owlCarousel();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
     const buttonsContainer = document.querySelector(".buttons-wrap");
     const fridgeInfoContainer = document.querySelector(".card_size_m:nth-child(8) .card-description");
     setTimeout(function() {
