@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     '<p class="card-time card-time_block">16:20, Сегодня</p>' +
                 '</div>'
 
-    const buttonsContainer = document.querySelector(".buttons-wrap");
     const fridgeInfoContainer = document.querySelector(".card_size_m:nth-child(8) .card-description");
     setTimeout(function() {
         const confirmPurchaseButton = document.querySelector(".buttons-wrap .button_yellow");
