@@ -587,25 +587,6 @@ html {
     float: left
 }
 
-.analyser {
-    position: absolute;
-    z-index: 5;
-    width: 30px;
-    height: 0;
-    bottom: 40px;
-    right: 0;
-    background: green;
-    transition: height .5s ease
-}
-
-.analyser_active {
-    position: fixed;
-    z-index: 15;
-    bottom: 40px;
-    right: 40px;
-    width: 60px
-}
-
 @media (max-width: 1230px) {
     .card_size_m {
         grid-column: span 4
