@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
         '<button class="button">Нет</button>';
 
 
-    var carousel = $("#carousel");
-    carousel.owlCarousel();
-
     $('.card').each(function(e) {
         if ($(this).hasClass('card_size_s')) {
             $(this).css({'border-radius': '22px'})
