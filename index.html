@@ -8,7 +8,6 @@
    
     <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css"/>
-    <script src="js/owl-carousel/owl.carousel.min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script async src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
     <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
@@ -303,9 +302,27 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
                 <div class="card card_size_l critical">
                     <div class="card-heading heading-critical">
                         <div class="card-icon-wrap">
-                            <div id="carousel">
+                            <!-- <div id="carousel">
                                 <div class="carousel-element">
                                     <img class="card-icon" src="img/cam.svg">
+                                </div>
+                            </div> -->
+                            <div id="carousel" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+                                <div class="owl-wrapper-outer">
+                                    <div class="owl-wrapper" style="width: 18px; left: 0px; display: block;">
+                                        <div class="owl-item" style="width: 9px;">
+                                            <div class="carousel-element">
+                                                <img class="card-icon" src="img/cam.svg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-controls clickable" style="display: none;">
+                                    <div class="owl-pagination">
+                                        <div class="owl-page">
+                                            <span class=""></span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -316,9 +333,9 @@ body /shadow-deep/ [touch-action="pan-x pan-y"],body /shadow-deep/ [touch-action
                         <p class="card-time">16:17, Сегодня</p>
                     </div>
                     <p class="card-description card-description_big description_critical">Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь.
-                        <div class="critical-cam" onload="initCriticalCam()" touch-action="none" style="background-position: 0px 0px; background-size: 100%; filter: brightness(100%);"></div>
-                    </p>
-                </div>
+                    <div class="critical-cam" onload="initCriticalCam()" touch-action="none" style="background-position: 0px 0px; background-size: 100%; filter: brightness(100%);">
+                    </div>
+                </p></div>
 
                 <div class="card card_size_s" style="border-radius: 22px;">
                     <div class="card-heading">
