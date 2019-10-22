@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     buttonsContainer.innerHTML = '<button class="button button_yellow" type="button">Да</button>' +
         '<button class="button">Нет</button>';
 
-
-    $('.card').each(function(e) {
-        if ($(this).hasClass('card_size_s')) {
-            $(this).css({'border-radius': '22px'})
+    [].slice.call(document.querySelectorAll('.card')).forEach(item => {
+        if (item.classList.contains('card_size_s')) {
+            item.style.borderRadius = '22px';
         } else {
-            $(this).css({'border-radius': '23px'})
+            item.style.borderRadius = '23px';
         }
     });
+
     var waterContainer = document.querySelector('.card.card_size_s:last-child');
     waterContainer.innerHTML = 
                 '<div class="card-heading">' +
